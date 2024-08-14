@@ -44,8 +44,8 @@
 		dbPath = [libraryDirectory stringByAppendingPathComponent:dbname];
 	} else {
 		//set Library/LocalDatabase as default target directory and disable iCloud backup
-		libraryDirectory = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-		NSString *nosync = [libraryDirectory stringByAppendingPathComponent:@"LocalDatabase"];
+		NSString *libs = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex: 0];
+		NSString *nosync = [libs stringByAppendingPathComponent:@"LocalDatabase"];
 		if ([fileManager fileExistsAtPath:nosync]) {
 			dbPath = [nosync stringByAppendingPathComponent:dbname];
 		} else {
@@ -267,8 +267,8 @@
 		dbPath = [libraryDirectory stringByAppendingPathComponent:dbname];
 	} else {
 		//set Library/LocalDatabase as default target directory and disable iCloud backup
-		libraryDirectory = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-		NSString *nosync = [libraryDirectory stringByAppendingPathComponent:@"LocalDatabase"];
+		NSString *libs = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex: 0];
+		NSString *nosync = [libs stringByAppendingPathComponent:@"LocalDatabase"];
 		if ([fileManager fileExistsAtPath:nosync]) {
 			dbPath = [nosync stringByAppendingPathComponent:dbname];
 		} else {
